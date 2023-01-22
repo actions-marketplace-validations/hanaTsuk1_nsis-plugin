@@ -10,6 +10,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - shell: pwsh
+    - name: install
+      shell: pwsh
       run: |
         ./index.ps1 ${{ inputs.list }}

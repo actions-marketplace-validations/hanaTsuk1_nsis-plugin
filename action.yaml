@@ -8,9 +8,8 @@ inputs:
     description: nsis plugin name list
     required: true
 runs:
-  using: composite
+  using: "composite"
   steps:
-    - name: install
-      shell: pwsh
+    - shell: pwsh
       run: |
         ./index.ps1 ${{ inputs.list }}
